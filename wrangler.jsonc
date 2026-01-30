@@ -35,8 +35,8 @@
 	"kv_namespaces": [
 		{
 			"binding": "VALENTINE_KV",
-			"id": "YOUR_KV_NAMESPACE_ID",
-			"preview_id": "YOUR_PREVIEW_KV_NAMESPACE_ID"
+			"id": "aa55496c4bc142b3b697e053e8591e75",
+			"preview_id": "ea7a04eba52e4698935dc9ba78e86955"
 		}
 	],
 	"observability": {

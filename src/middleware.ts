@@ -1,22 +1,24 @@
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 
-export function proxy(request: NextRequest) {
+export function middleware(request: NextRequest) {
   const url = request.nextUrl.clone();
-  const token = url.searchParams.get('t');
+  const token = url.searchParams.get('token');
 
   // If the token is present in the URL
   if (token) {
     // Remove the token from the query params
-    url.searchParams.delete('t');
+    url.searchParams.delete('token');
     
     // Create a redirect response to the clean URL
     const response = NextResponse.redirect(url);
     
     // Set the token in a httpOnly cookie
+    const isSecure = url.protocol === 'https:';
+    
     response.cookies.set('valentine_token', token, {
       httpOnly: true,
-      secure: process.env.NODE_ENV === 'production',
+      secure: isSecure,
       sameSite: 'lax',
       path: '/',
     });
