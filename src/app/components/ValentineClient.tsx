@@ -3,8 +3,7 @@
 import { useState, useEffect } from 'react';
 import confetti from 'canvas-confetti';
 import {
-  REJECTION_MESSAGES,
-  QUESTION_MESSAGES,
+  MESSAGES,
   SUCCESS_IMAGE_URL,
   SUCCESS_TEXT,
   CONFETTI_COLORS,
@@ -87,8 +86,8 @@ export default function ValentineClient({ name }: ValentineClientProps) {
     );
   }
 
-  const noButtonText = REJECTION_MESSAGES[Math.min(noCount, REJECTION_MESSAGES.length - 1)];
-  const questionText = QUESTION_MESSAGES[Math.min(noCount, QUESTION_MESSAGES.length - 1)];
+  const messageIndex = Math.min(noCount, MESSAGES.length - 1);
+  const { buttonText: noButtonText, questionText } = MESSAGES[messageIndex];
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen p-4 overflow-hidden relative">

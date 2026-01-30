@@ -1,41 +1,22 @@
-export const REJECTION_MESSAGES = [
-  "No",
-  "Are you sure?",
-  "Really sure?",
-  "Think again!",
-  "Last chance!",
-  "Surely not?",
-  "You might regret this!",
-  "Give it another thought!",
-  "Are you absolutely certain?",
-  "This could be a mistake!",
-  "Have a heart!",
-  "Don't be so cold!",
-  "Change of heart?",
-  "Wouldn't you reconsider?",
-  "Is that your final answer?",
-  "You're breaking my heart ;(",
-  "Plsss? (With puppy eyes)",
-] as const;
-
-export const QUESTION_MESSAGES = [
-  "Will you be my Valentine?",
-  "Are you really sure?",
-  "Don't do this to me!",
-  "I'm asking nicely!",
-  "Pretty please?",
-  "I'll be so sad...",
-  "I'm gonna cry...",
-  "Don't break my heart...",
-  "I'll make you cookies!",
-  "I'll give you massagesss!",
-  "I'll do the dishes!",
-  "What if I say pretty please?",
-  "Don't be like that!",
-  "I love you so much though!",
-  "Please say yes!",
-  "I'm begging you!",
-  "Okay, last time asking...",
+export const MESSAGES = [
+  { buttonText: "No", questionText: "Will you be my Valentine?" },
+  { buttonText: "Are you sure?", questionText: "Are you really sure?" },
+  { buttonText: "Really sure?", questionText: "Don't do this to me!" },
+  { buttonText: "Think again!", questionText: "I'm asking nicely!" },
+  { buttonText: "Last chance!", questionText: "Pretty please?" },
+  { buttonText: "Surely not?", questionText: "I'll be so sad..." },
+  { buttonText: "You might regret this!", questionText: "I'm gonna cry..." },
+  { buttonText: "Give it another thought!", questionText: "Don't break my heart..." },
+  { buttonText: "Make Adalie sad button", questionText: "You wouldn't press that would you?" },
+  { buttonText: "This could be a mistake!", questionText: "I'll make you cookies!" },
+  { buttonText: "Have a heart!", questionText: "I'll do the dishes!" },
+  { buttonText: "Don't be so cold!", questionText: "What if I say pretty please?" },
+  { buttonText: "Change of heart?", questionText: "Don't be like that!" },
+  { buttonText: "Wouldn't you reconsider?", questionText: "😭😭😭" },
+  { buttonText: "Make Adalie cry button", questionText: "Please say yes!" },
+  { buttonText: "Is that your final answer?", questionText: "I'm begging you!" },
+  { buttonText: "You're breaking my heart ;(", questionText: "Okay, last time asking..." },
+  { buttonText: "Plsss? (With puppy eyes)", questionText: "Okay, last time asking... (seriously!)" },
 ] as const;
 
 // Configurable image for the "Yay" page.
@@ -44,5 +25,4 @@ export const SUCCESS_IMAGE_URL = "https://media.tenor.com/gUiu1zyxfzYAAAAi/bear-
 export const ASKING_IMAGE_URL = "https://media.tenor.com/LBEh1g_3QbUAAAAj/please-pretty-please.gif";
 
 export const SUCCESS_TEXT = "Yay!!! 💖";
-
 export const CONFETTI_COLORS = ['#E40303', '#FF8C00', '#FFED00', '#008026', '#004CFF', '#732982', "#FFF430", "#FFFFFF", "#9C59D1", "#5BCEFA", "#F5A9B8", ];
