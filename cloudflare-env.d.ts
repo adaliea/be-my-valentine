@@ -7,6 +7,7 @@ declare namespace Cloudflare {
 		ASSETS: Fetcher;
 		NEXTJS_ENV: string;
 		WORKER_SELF_REFERENCE: Fetcher /* valentine-next */;
+		VALENTINE_KV: KVNamespace;
 	}
 }
 interface CloudflareEnv extends Cloudflare.Env {}
