@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-	title: "For You 💖",
+	title: "For You",
 	description: "A special question...",
 };
 
@@ -26,7 +26,7 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<head>
-				<link rel="icon" href="/favicon.svg" type="image/svg+xml"></link>
+				<link rel="icon" href="/heart.svg" type="image/svg+xml"></link>
 			</head>
 			<body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>{children}</body>
 		</html>
