@@ -112,14 +112,14 @@ export default function ValentineClient({ name }: ValentineClientProps) {
               fontSize: `${noCount * 10 + 20}px`,
               transition: 'width 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275) height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275)'
             }}
-            className="bg-[#2ecc71] hover:bg-[#27ae60] text-white font-bold py-3 px-8 rounded-full shadow-lg text-xl z-20 whitespace-nowrap duration-200 hover:scale-104"
+            className="bg-[#2ecc71] hover:bg-[#27ae60] text-white font-bold py-3 px-8 corner-squircle rounded-4xl shadow-lg text-xl z-20 whitespace-nowrap duration-200 hover:scale-104"
           >
             Yes 💖
           </button>
 
           <button
             onClick={handleNoClick}
-            className="bg-[#e74c3c] hover:bg-[#c0392b] text-white font-bold py-3 px-8 rounded-full shadow-lg text-xl transition-all duration-200 hover:scale-95"
+            className="bg-[#e74c3c] hover:bg-[#c0392b] text-white font-bold py-3 px-8 corner-squircle rounded-4xl shadow-lg text-xl transition-all duration-200 hover:scale-95"
           >
             {noButtonText}
           </button>

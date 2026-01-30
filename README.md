@@ -2,6 +2,11 @@
 
 A personalized, interactive website to ask your special someone to be your Valentine. Built with Next.js and deployed on Cloudflare Workers.
 
+Inspired by the following:
+- https://www.youtube.com/shorts/y6vJyY2m7a0
+- https://www.youtube.com/shorts/MDYzgYfdYFU
+
+
 ## Features
 
 - **Interactive Question:** "Will you be my Valentine?" with Yes/No buttons.

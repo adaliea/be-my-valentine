@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@plugin "@toolwind/corner-shape";
 
 :root {
   --background: #fff0f5; /* Lavender Blush */
