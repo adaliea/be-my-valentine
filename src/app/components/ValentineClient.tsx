@@ -70,18 +70,22 @@ export default function ValentineClient({ name }: ValentineClientProps) {
 
   if (accepted) {
     return (
-      <div className="flex flex-col items-center justify-center min-h-screen p-4 text-center animate-in fade-in zoom-in duration-500">
-        <Image
-          src={SUCCESS_IMAGE_URL}
-          width={"400"}
-          height={"400"}
-          alt="Celebration" 
-          className="max-w-full h-auto rounded-lg max-h-[400px] object-contain"
-          unoptimized={true}
-        />
-        <h1 className="text-4xl md:text-6xl font-bold text-[#A30262] drop-shadow-sm">
-          {SUCCESS_TEXT}
-        </h1>
+      <div className="flex flex-col items-center justify-center h-full w-full p-6 text-center animate-in fade-in zoom-in duration-500 overflow-hidden">
+        <div className=" flex items-center justify-center min-h-0 w-full">
+          <Image
+            src={SUCCESS_IMAGE_URL}
+            width={400}
+            height={400}
+            alt="Celebration"
+            className="max-w-full max-h-full object-contain rounded-2xl"
+            unoptimized={true}
+          />
+        </div>
+        <div className="flex items-start justify-center w-full mt-4">
+          <h1 className="text-4xl md:text-6xl font-bold text-[#A30262] drop-shadow-sm shrink-0">
+            {SUCCESS_TEXT}
+          </h1>
+        </div>
       </div>
     );
   }
@@ -90,48 +94,40 @@ export default function ValentineClient({ name }: ValentineClientProps) {
   const { buttonText: noButtonText, questionText } = MESSAGES[messageIndex];
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen p-4 overflow-hidden relative">
-      <div className="z-10 flex flex-col items-center gap-8 w-full">
-        <Image
-          src={ASKING_IMAGE_URL}
-          width={"500"}
-          height={"500"}
-          alt="Cute asking cat"
-          className="w-48 h-48 object-contain mb-4"
-          unoptimized={true}
-        />
-        
-        <h1 className="text-3xl md:text-5xl font-bold text-center text-[#A30262] leading-tight">
-          {name && noCount === 0 ? `${name}, ` : ''}{questionText}
-        </h1>
+      <div className="z-10 flex flex-col items-center justify-center w-full h-full p-6">
+        <div className="flex flex-col items-center justify-center min-h-0 w-full shrink">
+          <div className="flex items-center justify-center min-h-0 w-full shrink">
+            <img
+              src={ASKING_IMAGE_URL}
+              alt="Cute asking cat"
+              className="max-w-full max-h-full min-h-0 object-contain shrink transition-all duration-300"
+            />
+          </div>
+          
+          <h1 className="text-3xl md:text-5xl font-bold text-center text-[#A30262] leading-tight shrink-0 my-4">
+            {name && noCount === 0 ? `${name}, ` : ''}{questionText}
+          </h1>
+        </div>
 
-        <div className="flex flex-wrap gap-4 items-center justify-center w-full mt-8">
+        <div className="flex flex-wrap gap-4 items-center justify-center w-full shrink-0 mt-4 min-h-[100px] relative">
           <button
             onClick={handleYesClick}
             style={{ 
               fontSize: `${noCount * 10 + 20}px`,
-              transition: 'width 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275) height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275)'
+              transition: 'all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275)'
             }}
-            className="bg-[#2ecc71] hover:bg-[#27ae60] text-white font-bold py-3 px-8 corner-squircle rounded-4xl shadow-lg text-xl z-20 whitespace-nowrap duration-200 hover:scale-104"
+            className="bg-[#2ecc71] hover:bg-[#27ae60] text-white font-bold py-3 px-8 corner-squircle rounded-4xl shadow-lg z-20 whitespace-nowrap duration-200 hover:scale-104"
           >
             Yes 💖
           </button>
 
           <button
             onClick={handleNoClick}
-            className="bg-[#e74c3c] hover:bg-[#c0392b] text-white font-bold py-3 px-8 corner-squircle rounded-4xl shadow-lg text-xl transition-all duration-200 hover:scale-95"
+            className="bg-[#e74c3c] hover:bg-[#c0392b] text-white font-bold py-3 px-8 corner-squircle rounded-4xl shadow-lg text-xl transition-all duration-200 hover:scale-95 shrink-0 pb-4"
           >
             {noButtonText}
           </button>
         </div>
       </div>
-      
-      {/* Decorative Background Elements */}
-      <div className="absolute top-0 left-0 w-full h-full -z-10 opacity-10 pointer-events-none overflow-hidden">
-        <div className="absolute top-10 left-10 text-6xl text-pink-300 animate-pulse">❤</div>
-        <div className="absolute bottom-10 right-10 text-8xl text-purple-300 animate-bounce">❤</div>
-        <div className="absolute top-1/2 left-1/4 text-4xl text-orange-300 animate-spin-slow">❤</div>
-      </div>
-    </div>
   );
 }

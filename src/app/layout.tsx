@@ -24,11 +24,11 @@ export default function RootLayout({
 	children: React.ReactNode;
 }>) {
 	return (
-		<html lang="en">
+		<html lang="en" className="h-full overscroll-none overflow-hidden">
 			<head>
 				<link rel="icon" href="/heart.svg" type="image/svg+xml"></link>
 			</head>
-			<body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>{children}</body>
+			<body className={`${geistSans.variable} ${geistMono.variable} antialiased h-full overscroll-none overflow-hidden`}>{children}</body>
 		</html>
 	);
 }

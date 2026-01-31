@@ -16,7 +16,7 @@ export default async function Home() {
   }
 
   return (
-    <main className="min-h-screen bg-pink-50 text-slate-800">
+    <main className="overflow-hidden bg-pink-50  h-full">
       <ValentineClient name={nameToDisplay} />
     </main>
   );

@@ -2,20 +2,13 @@
 @plugin "@toolwind/corner-shape";
 
 :root {
-  --background: #fff0f5; /* Lavender Blush */
-  --foreground: #4a0e2e;
+  --background: #fdf2f8; /* pink-50 */
+  --foreground: #1e293b; /* slate-800 */
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #1a0510;
-    --foreground: #fce7f3;
-  }
 }
 
 body {
@@ -27,6 +20,13 @@ body {
 /* Custom Utilities */
 .animate-spin-slow {
   animation: spin 8s linear infinite;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #fdf2f8; /* pink-50 */
+    --foreground: #1e293b; /* slate-800 */
+  }
 }
 
 @keyframes spin {
