@@ -6,6 +6,12 @@ Inspired by the following:
 - https://www.youtube.com/shorts/y6vJyY2m7a0
 - https://www.youtube.com/shorts/MDYzgYfdYFU
 
+
+<img width="45%" height="auto" alt="image" src="https://github.com/user-attachments/assets/24d6a653-a13b-42aa-b7e5-19537666d1a7" />
+<img width="45%" height="auto" alt="image" src="https://github.com/user-attachments/assets/2a25f445-63d3-4827-ab87-3c48bc78041d" />
+<img width="45%" height="auto" alt="image" src="https://github.com/user-attachments/assets/70d98bf2-95ce-4e9a-945d-ce0045b5cacb" />
+<img width="45%" height="auto" alt="image" src="https://github.com/user-attachments/assets/3162491b-a821-47fd-9749-cc60a76dd004" />
+
 ## Demo
 [https://valentine.adalie.me/](https://valentine.adalie.me/)
 
