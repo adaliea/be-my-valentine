@@ -18,11 +18,6 @@ interface ValentineClientProps {
 export default function ValentineClient({ name }: ValentineClientProps) {
   const [accepted, setAccepted] = useState(false);
   const [noCount, setNoCount] = useState(0);
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
 
   const handleNoClick = async () => {
     const newCount = noCount + 1;
@@ -65,8 +60,6 @@ export default function ValentineClient({ name }: ValentineClientProps) {
       console.error('Failed to record "Yes" click:', error);
     }
   };
-
-  if (!mounted) return null; // Avoid hydration mismatch on initial render with dynamic styles if any
 
   if (accepted) {
     return (
